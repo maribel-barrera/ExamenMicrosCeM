@@ -1,0 +1,485 @@
+{
+	"info": {
+		"_postman_id": "66372bef-7643-46fe-a611-2b20d12db8c3",
+		"name": "EXAMEN_MICROS",
+		"schema": "https://schema.getpostman.com/json/collection/v2.1.0/collection.json"
+	},
+	"item": [
+		{
+			"name": "USERS",
+			"item": [
+				{
+					"name": "01 CREAD USUARIOS 201",
+					"request": {
+						"method": "POST",
+						"header": [],
+						"body": {
+							"mode": "raw",
+							"raw": " {\r\n    \"password\": \"mina\",\r\n    \"user_name\": \"mina\"\r\n}",
+							"options": {
+								"raw": {
+									"language": "json"
+								}
+							}
+						},
+						"url": {
+							"raw": "http://localhost:8080/createUser",
+							"protocol": "http",
+							"host": [
+								"localhost"
+							],
+							"port": "8080",
+							"path": [
+								"createUser"
+							]
+						}
+					},
+					"response": []
+				},
+				{
+					"name": "02 READ USUARIOS 200",
+					"request": {
+						"method": "GET",
+						"header": [],
+						"url": {
+							"raw": "http://localhost:8080/listUsers",
+							"protocol": "http",
+							"host": [
+								"localhost"
+							],
+							"port": "8080",
+							"path": [
+								"listUsers"
+							]
+						}
+					},
+					"response": []
+				},
+				{
+					"name": "03 UPDATE USUARIOS 200",
+					"request": {
+						"method": "PUT",
+						"header": [],
+						"body": {
+							"mode": "raw",
+							"raw": "{\r\n    \"password\": \"123\",\r\n    \"user_name\": \"marybel\"\r\n}",
+							"options": {
+								"raw": {
+									"language": "json"
+								}
+							}
+						},
+						"url": {
+							"raw": "http://localhost:8080/updateUser/1",
+							"protocol": "http",
+							"host": [
+								"localhost"
+							],
+							"port": "8080",
+							"path": [
+								"updateUser",
+								"1"
+							]
+						}
+					},
+					"response": []
+				},
+				{
+					"name": "04 DELETE USUARIOS 200",
+					"request": {
+						"method": "DELETE",
+						"header": [],
+						"url": {
+							"raw": "http://localhost:8080/deleteUser/3",
+							"protocol": "http",
+							"host": [
+								"localhost"
+							],
+							"port": "8080",
+							"path": [
+								"deleteUser",
+								"3"
+							]
+						}
+					},
+					"response": []
+				}
+			]
+		},
+		{
+			"name": "POST",
+			"item": [
+				{
+					"name": "01 CREAD POST 200",
+					"request": {
+						"method": "POST",
+						"header": [],
+						"body": {
+							"mode": "raw",
+							"raw": " {\r\n    \"id_user\": 1,\r\n    \"content_post\": \"Otro post desde postman 8:51:)\",\r\n    \"date_post\": \"2022-03-11T06:00:00.000+00:00\",\r\n    \"num_likes\": 345,\r\n    \"num_comments\": 15\r\n}",
+							"options": {
+								"raw": {
+									"language": "json"
+								}
+							}
+						},
+						"url": {
+							"raw": "http://localhost:8080/createPost",
+							"protocol": "http",
+							"host": [
+								"localhost"
+							],
+							"port": "8080",
+							"path": [
+								"createPost"
+							]
+						}
+					},
+					"response": []
+				},
+				{
+					"name": "02 READ POST 201",
+					"request": {
+						"method": "GET",
+						"header": [],
+						"url": {
+							"raw": "http://localhost:8080/listPost",
+							"protocol": "http",
+							"host": [
+								"localhost"
+							],
+							"port": "8080",
+							"path": [
+								"listPost"
+							]
+						}
+					},
+					"response": []
+				},
+				{
+					"name": "03 UPDATE POST 200",
+					"request": {
+						"method": "PUT",
+						"header": [],
+						"body": {
+							"mode": "raw",
+							"raw": " {\r\n    \"id_user\": 1,\r\n    \"content_post\": \"Otro post desde postman editadoo  8:53 okokoko\",\r\n    \"date_post\": \"2022-03-11T06:00:00.000+00:00\",\r\n    \"num_likes\": 20,\r\n    \"num_comments\": 3\r\n}",
+							"options": {
+								"raw": {
+									"language": "json"
+								}
+							}
+						},
+						"url": {
+							"raw": "http://localhost:8080/updatePost/4",
+							"protocol": "http",
+							"host": [
+								"localhost"
+							],
+							"port": "8080",
+							"path": [
+								"updatePost",
+								"4"
+							]
+						}
+					},
+					"response": []
+				},
+				{
+					"name": "04 DELETE POST 200",
+					"request": {
+						"method": "DELETE",
+						"header": [],
+						"url": {
+							"raw": "http://localhost:8080/deletePost/1",
+							"protocol": "http",
+							"host": [
+								"localhost"
+							],
+							"port": "8080",
+							"path": [
+								"deletePost",
+								"1"
+							]
+						}
+					},
+					"response": []
+				}
+			]
+		},
+		{
+			"name": "COMMENTS",
+			"item": [
+				{
+					"name": "01 CREAD COMMENT 201",
+					"request": {
+						"method": "POST",
+						"header": [],
+						"body": {
+							"mode": "raw",
+							"raw": "{\r\n    \"id_user\": 1,\r\n    \"content_text\": \"x3 super bien like xmil\",\r\n    \"content_image\": \"file23423.gif\",\r\n    \"date_comment\": \"2022-03-11T06:00:00.000+00:00\"\r\n}",
+							"options": {
+								"raw": {
+									"language": "json"
+								}
+							}
+						},
+						"url": {
+							"raw": "http://localhost:8082/createComment",
+							"protocol": "http",
+							"host": [
+								"localhost"
+							],
+							"port": "8082",
+							"path": [
+								"createComment"
+							]
+						}
+					},
+					"response": []
+				},
+				{
+					"name": "02 READ COMMENTS 200",
+					"request": {
+						"method": "GET",
+						"header": [],
+						"url": {
+							"raw": "http://localhost:8082/listComment",
+							"protocol": "http",
+							"host": [
+								"localhost"
+							],
+							"port": "8082",
+							"path": [
+								"listComment"
+							]
+						}
+					},
+					"response": []
+				},
+				{
+					"name": "03 UPDATE COMMENT 200",
+					"request": {
+						"method": "PUT",
+						"header": [],
+						"body": {
+							"mode": "raw",
+							"raw": "{\r\n    \"id_comment\": 1,\r\n    \"id_user\": 1,\r\n    \"content_text\": \"Muy interesante articulo :d like \",\r\n    \"content_image\": \"\",\r\n    \"date_comment\": \"2022-03-11T06:00:00.000+00:00\"\r\n},",
+							"options": {
+								"raw": {
+									"language": "json"
+								}
+							}
+						},
+						"url": {
+							"raw": "http://localhost:8082/updateComment/1",
+							"protocol": "http",
+							"host": [
+								"localhost"
+							],
+							"port": "8082",
+							"path": [
+								"updateComment",
+								"1"
+							]
+						}
+					},
+					"response": []
+				},
+				{
+					"name": "04 DELETE COMMENT 200",
+					"request": {
+						"method": "DELETE",
+						"header": [],
+						"url": {
+							"raw": "http://localhost:8082/deleteComment/1",
+							"protocol": "http",
+							"host": [
+								"localhost"
+							],
+							"port": "8082",
+							"path": [
+								"deleteComment",
+								"1"
+							]
+						}
+					},
+					"response": []
+				}
+			]
+		},
+		{
+			"name": "FRIENDS",
+			"item": [
+				{
+					"name": "01 CREAD FRIENDS 201",
+					"request": {
+						"method": "POST",
+						"header": [],
+						"body": {
+							"mode": "raw",
+							"raw": "{\r\n    \"id_user_sender\": 2,\r\n    \"id_user_receptor\": 1,\r\n    \"date_request\": \"2022-03-13T21:04:14.391+00:00\",\r\n    \"acepted\": true\r\n}",
+							"options": {
+								"raw": {
+									"language": "json"
+								}
+							}
+						},
+						"url": {
+							"raw": "http://localhost:8085/createFriend",
+							"protocol": "http",
+							"host": [
+								"localhost"
+							],
+							"port": "8085",
+							"path": [
+								"createFriend"
+							]
+						}
+					},
+					"response": []
+				},
+				{
+					"name": "02 READ FRIENDS 200",
+					"request": {
+						"method": "GET",
+						"header": [],
+						"url": {
+							"raw": "http://localhost:8085/listFrinds",
+							"protocol": "http",
+							"host": [
+								"localhost"
+							],
+							"port": "8085",
+							"path": [
+								"listFrinds"
+							]
+						}
+					},
+					"response": []
+				},
+				{
+					"name": "03 DELETE FRIEND 200",
+					"request": {
+						"method": "DELETE",
+						"header": [],
+						"url": {
+							"raw": "http://localhost:8085/deleteFrind/2",
+							"protocol": "http",
+							"host": [
+								"localhost"
+							],
+							"port": "8085",
+							"path": [
+								"deleteFrind",
+								"2"
+							]
+						}
+					},
+					"response": []
+				}
+			]
+		},
+		{
+			"name": "PROFILES",
+			"item": [
+				{
+					"name": "01 CREAD PROFILE 201",
+					"request": {
+						"method": "POST",
+						"header": [],
+						"body": {
+							"mode": "raw",
+							"raw": " {\r\n    \"name\": \"pedro\",\r\n    \"last_name\": \"peres\",\r\n    \"age\": 63,\r\n    \"date_of_birth\": \"2022-10-18T05:00:00.000+00:00\",\r\n    \"phone_number\": 985365,\r\n    \"email\": \"perezp@gmail.com\"\r\n}",
+							"options": {
+								"raw": {
+									"language": "json"
+								}
+							}
+						},
+						"url": {
+							"raw": "http://localhost:8081/createProfile",
+							"protocol": "http",
+							"host": [
+								"localhost"
+							],
+							"port": "8081",
+							"path": [
+								"createProfile"
+							]
+						}
+					},
+					"response": []
+				},
+				{
+					"name": "02 READ PROFILES 200",
+					"request": {
+						"method": "GET",
+						"header": [],
+						"url": {
+							"raw": "http://localhost:8081/listProfile",
+							"protocol": "http",
+							"host": [
+								"localhost"
+							],
+							"port": "8081",
+							"path": [
+								"listProfile"
+							]
+						}
+					},
+					"response": []
+				},
+				{
+					"name": "03 UPDATE PROFILE 200",
+					"request": {
+						"method": "PUT",
+						"header": [],
+						"body": {
+							"mode": "raw",
+							"raw": "{\r\n    \"name\": \"maribel\",\r\n    \"last_name\": \"barrera tabares\",\r\n    \"age\": 27,\r\n    \"date_of_birth\": \"2022-10-18T05:00:00.000+00:00\",\r\n    \"phone_number\": 123569874,\r\n    \"email\": \"maribel_barrera@gmail.com\"\r\n}",
+							"options": {
+								"raw": {
+									"language": "json"
+								}
+							}
+						},
+						"url": {
+							"raw": "http://localhost:8081/updateProfile/1",
+							"protocol": "http",
+							"host": [
+								"localhost"
+							],
+							"port": "8081",
+							"path": [
+								"updateProfile",
+								"1"
+							]
+						}
+					},
+					"response": []
+				},
+				{
+					"name": "04 DELETE PROFILE 200",
+					"request": {
+						"method": "DELETE",
+						"header": [],
+						"url": {
+							"raw": "http://localhost:8081/deleteProfile/4",
+							"protocol": "http",
+							"host": [
+								"localhost"
+							],
+							"port": "8081",
+							"path": [
+								"deleteProfile",
+								"4"
+							]
+						}
+					},
+					"response": []
+				}
+			]
+		}
+	]
+}
