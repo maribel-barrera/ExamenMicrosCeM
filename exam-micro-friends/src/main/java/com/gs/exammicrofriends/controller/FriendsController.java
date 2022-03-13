@@ -53,7 +53,14 @@ public class FriendsController {
 	@ResponseStatus(OK)
 	public void borrarFriend(@PathVariable("id") int id) throws SQLException {
 		System.out.println("BORRAR ID = "+id);
-		_friendsService.deleteFriendByID(id);
+		
+		Friends friend = _friendsService.findFriendByID(id);
+		friend.setAcepted(false);
+		
+		System.out.println("EDITAR ID = "+id);
+		_friendsService.saveFriend(friend);
+		
+//		_friendsService.deleteFriendByID(id);
 	}
 	
 }

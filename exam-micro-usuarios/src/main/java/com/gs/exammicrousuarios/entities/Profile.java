@@ -1,6 +1,7 @@
 package com.gs.exammicrousuarios.entities;
 
 import java.io.Serializable;
+import java.util.Date;
 
 import javax.persistence.Column;
 import javax.persistence.Entity;
@@ -17,34 +18,81 @@ public class Profile implements Serializable {
 	
 	@Id
 	@GeneratedValue(strategy = GenerationType.IDENTITY)
-	@Column(name = "id_user")
-	private int id_user;
+	@Column(name = "id_profile")
+	private int id_profile;
 	
-	@Column(name = "password")
-	private String password;
+	@Column(name = "name")
+	private String name;
 	
-	@Column(name = "user_name")
-	private String user_name;
+	@Column(name = "last_name")
+	private String last_name;
 	
-	public int getId_user() {
-		return id_user;
-	}
-	public void setId_user(int id_user) {
-		this.id_user = id_user;
-	}
-	public String getPassword() {
-		return password;
-	}
-	public void setPassword(String password) {
-		this.password = password;
-	}
-	public String getUser_name() {
-		return user_name;
-	}
-	public void setUser_name(String user_name) {
-		this.user_name = user_name;
-	}
+	@Column(name = "age")
+	private int age;
 	
+	@Column(name = "date_of_birth")
+	private Date date_of_birth;
 	
+	@Column(name = "phone_number")
+	private int phone_number;
+	
+	@Column(name = "email")
+	private String email;
+
+	public int getId_profile() {
+		return id_profile;
+	}
+
+	public void setId_profile(int id_profile) {
+		this.id_profile = id_profile;
+	}
+
+	public String getName() {
+		return name;
+	}
+
+	public void setName(String name) {
+		this.name = name;
+	}
+
+	public String getLast_name() {
+		return last_name;
+	}
+
+	public void setLast_name(String last_name) {
+		this.last_name = last_name;
+	}
+
+	public int getAge() {
+		return age;
+	}
+
+	public void setAge(int age) {
+		this.age = age;
+	}
+
+	public Date getDate_of_birth() {
+		return date_of_birth;
+	}
+
+	public void setDate_of_birth(Date date_of_birth) {
+		this.date_of_birth = date_of_birth;
+	}
+
+	public int getPhone_number() {
+		return phone_number;
+	}
+
+	public void setPhone_number(int phone_number) {
+		this.phone_number = phone_number;
+	}
+
+	public String getEmail() {
+		return email;
+	}
+
+	public void setEmail(String email) {
+		this.email = email;
+	}
 	
 }

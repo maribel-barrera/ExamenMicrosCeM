@@ -30,6 +30,9 @@ public class Friends implements Serializable{
 	@Column(name = "date_request")
 	private Date date_request;
 	
+	@Column(name = "is_acepted")
+	private boolean acepted;
+	
 	public int getId_friends() {
 		return id_friends;
 	}
@@ -56,5 +59,11 @@ public class Friends implements Serializable{
 	}
 	public static long getSerialversionuid() {
 		return serialVersionUID;
+	}
+	public boolean isAcepted() {
+		return acepted;
+	}
+	public void setAcepted(boolean acepted) {
+		this.acepted = acepted;
 	}	
 }
